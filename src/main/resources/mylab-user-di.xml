@@ -5,5 +5,10 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<bean id="securityService" class="mylab.user.di.annot.SecurityService" />
+	
+	<bean id="userRepository" class="mylab.user.di.annot.UserRepository" />
+	
+	<bean id="userService" class="mylab.user.di.annot.UserService" />
 
 </beans>

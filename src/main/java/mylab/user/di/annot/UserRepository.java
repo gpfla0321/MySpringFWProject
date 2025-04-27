@@ -1,4 +1,8 @@
 package mylab.user.di.annot;
+
+import org.springframework.stereotype.Component;
+
+@Component("userRepository")
 public class UserRepository {
    private String dbType;
     
