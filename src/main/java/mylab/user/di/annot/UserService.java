@@ -1,12 +1,15 @@
 package mylab.user.di.annot;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Component("userService")
+@Service
 public class UserService {
 	
+	@Autowired
     private UserRepository userRepository;
-        
+       
+	@Autowired
     private SecurityService securityService;
         
     public UserRepository getUserRepository() { return userRepository; }

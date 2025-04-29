@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
- 	<!-- Student 클래스를 Spring Bean으로 설정 -->
+ 	<!-- Product 클래스를 Spring Bean으로 설정 -->
  	<bean id="product1" class="mylab.order.di.xml.Product">
  		<property name="id" value="P001" />
  		<property name="name" value="돼지고기" />
@@ -19,7 +19,7 @@
 	</bean>
 
 	<!-- ShoppingCart 클래스를 Spring Bean으로 설정 -->
-	<bean id="shoppingCart2" class="mylab.order.di.xml.ShoppingCart">
+	<bean id="shoppingCart" class="mylab.order.di.xml.ShoppingCart">
 		<property name="products">
 			<list>
 				<ref bean="product1" />
@@ -30,6 +30,6 @@
 	
 	<!-- OrderService 클래스를 Spring Bean으로 설정 -->
 	<bean id="orderService" class="mylab.order.di.xml.OrderService">
-		<property name="shoppingCart" ref="shoppingCart2" />
+		<property name="shoppingCart" ref="shoppingCart" />
 	</bean>
 </beans>
